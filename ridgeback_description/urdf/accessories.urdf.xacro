@@ -16,29 +16,29 @@
 
   <!-- If enabled, generate the front HOKUYO UST-10LX LASER payload. -->
   <xacro:if value="$(optenv RIDGEBACK_FRONT_HOKUYO_LASER 0)">
-    <xacro:hokuyo_ust-10lx_mount prefix="front"
-                                 topic="front/scan"
+    <xacro:hokuyo_ust-10lx_mount prefix="/front"
+                                 topic="/front/scan"
                                  location="1" />
   </xacro:if>
 
   <!-- If enabled, generate the rear HOKUYO UST-10LX LASER payload. -->
   <xacro:if value="$(optenv RIDGEBACK_REAR_HOKUYO_LASER 0)">
-    <xacro:hokuyo_ust-10lx_mount prefix="rear"
-                                 topic="rear/scan"
+    <xacro:hokuyo_ust-10lx_mount prefix="/rear"
+                                 topic="/rear/scan"
                                  location="-1" />
   </xacro:if>
 
   <!-- If enabled, generate the front SICK LMS111 LASER payload. -->
   <xacro:if value="$(optenv RIDGEBACK_FRONT_SICK_LASER 0)">
-    <xacro:sick_lms1xx_mount prefix="front"
-                             topic="front/scan"
+    <xacro:sick_lms1xx_mount prefix="/front"
+                             topic="/front/scan"
                              location="1" />
   </xacro:if>
 
   <!-- If enabled, generate the rear SICK LMS111 LASER payload. -->
   <xacro:if value="$(optenv RIDGEBACK_REAR_SICK_LASER 0)">
-    <xacro:sick_lms1xx_mount prefix="rear"
-                             topic="rear/scan"
+    <xacro:sick_lms1xx_mount prefix="/rear"
+                             topic="/rear/scan"
                              location="-1" />
   </xacro:if>
 
@@ -47,15 +47,15 @@
        This uses the same mesh as the lms1xx since they are the footprint
        and the simulation parameters can be variable. -->
   <xacro:if value="$(optenv RIDGEBACK_FRONT_S300_LASER 0)">
-    <xacro:sick_s300_mount prefix="front"
-                             topic="front/scan"
+    <xacro:sick_s300_mount prefix="/front"
+                             topic="/front/scan"
                              location="1" />
   </xacro:if>
 
   <!-- If enabled, generate the rear SICK S300 LASER payload. -->
   <xacro:if value="$(optenv RIDGEBACK_REAR_S300_LASER 0)">
-    <xacro:sick_s300_mount prefix="rear"
-                             topic="rear/scan"
+    <xacro:sick_s300_mount prefix="/rear"
+                             topic="/rear/scan"
                              location="-1" />
   </xacro:if>
 
