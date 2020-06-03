@@ -11,8 +11,11 @@
               ridgeback_velocity_controller" />
 
 
-  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" />
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
+    <remap from="/ridgeback/odometry/filtered" to="/odometry/filtered" />
+  </node>
+
 
   <node pkg="topic_tools" type="relay" name="cmd_vel_relay"
-        args="cmd_vel ridgeback_velocity_controller/cmd_vel" />
+        args="/cmd_vel ridgeback_velocity_controller/cmd_vel" />
 </launch>
