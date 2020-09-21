@@ -13,15 +13,15 @@
 
   <!-- If enabled, generate the front HOKUYO UST-10LX LASER payload. -->
   <xacro:if value="$(optenv RIDGEBACK_FRONT_HOKUYO_LASER 0)">
-    <xacro:hokuyo_ust-10lx_mount prefix="/front"
-                                 topic="/front/scan"
+    <xacro:hokuyo_ust-10lx_mount prefix="front"
+                                 topic="front/scan"
                                  location="1" />
   </xacro:if>
 
   <!-- If enabled, generate the rear HOKUYO UST-10LX LASER payload. -->
   <xacro:if value="$(optenv RIDGEBACK_REAR_HOKUYO_LASER 0)">
-    <xacro:hokuyo_ust-10lx_mount prefix="/rear"
-                                 topic="/rear/scan"
+    <xacro:hokuyo_ust-10lx_mount prefix="rear"
+                                 topic="rear/scan"
                                  location="-1" />
   </xacro:if>
 </robot>
