@@ -13,6 +13,7 @@
 
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization">
     <remap from="/ridgeback/odometry/filtered" to="/odometry/filtered" />
+    <remap from="/imu/data" to="/ridgeback/imu/data" />
   </node>
 
 
